@@ -98,3 +98,13 @@ window.addEventListener('load', () => {
   preloader.style.display = 'none';   // hide preloader
   mainContent.style.display = 'block'; // show page content
 });
+  window.addEventListener('load', () => {
+  const containers = document.querySelectorAll('.animate-text-lines');
+  
+  containers.forEach(container => {
+    const children = container.children;
+    for (let i = 0; i < children.length; i++) {
+      children[i].style.animationDelay = `${i * 0.3 + 0.3}s`;
+    }
+  });
+});
